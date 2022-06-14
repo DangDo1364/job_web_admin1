@@ -24,7 +24,7 @@
         <input type="text" class="form-control" id="name_cat" name="name_cat" value="@cat.name_cat" required>
     </div>
     <div class="form-group">
-        <label>Mã danh mục cha:</label>
+        <label>Danh mục cha:</label>
         <select class="form-control" id="id_parent" name="id_parent">
             <option value="0">Danh mục cha</option>
             @foreach (var item in Model)
@@ -40,7 +40,7 @@
             }
         </select>
     </div>
-    <button type="submit" class="btn btn-success" id="submit" value="Thêm">Submit</button>
+    <button type="submit" class="btn btn-success" id="submit" value="Thêm">Cập nhật</button>
     <a asp-action="Index" style="float:right;">Quay lại</a>
 </form>
 <div>

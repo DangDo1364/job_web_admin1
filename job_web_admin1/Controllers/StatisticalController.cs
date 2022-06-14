@@ -119,7 +119,7 @@ namespace Project_UITGreen_admin.Controllers
             using (var package = new ExcelPackage(stream))
             {
                 var sheet = package.Workbook.Worksheets.Add("HoaDon");
-                System.Drawing.Image img = System.Drawing.Image.FromFile(@"wwwroot\image\logohoadon.png");
+                System.Drawing.Image img = System.Drawing.Image.FromFile(@"wwwroot\image\logo.png");
                 ExcelPicture pic = sheet.Drawings.AddPicture("logo", img);
                 pic.SetPosition(0, 0);
                 // Format cho đẹp
@@ -141,13 +141,13 @@ namespace Project_UITGreen_admin.Controllers
                     range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                     range.Style.Font.SetFromFont(new Font("Times New Roman", 18));
                     range.Style.Font.Bold = true;
-                    range.Style.Font.Color.SetColor(Color.Green);
+                    range.Style.Font.Color.SetColor(Color.FromArgb(61, 41, 35));
                 }
 
                 using (var range = sheet.Cells["A2:G2"])
                 {
                     range.Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    range.Style.Fill.BackgroundColor.SetColor(Color.Green);
+                    range.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(61, 41, 35));
 
                     range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                     range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
@@ -157,7 +157,7 @@ namespace Project_UITGreen_admin.Controllers
                     range.Style.Font.Color.SetColor(Color.White);
 
                     range.Style.Border.Bottom.Style = ExcelBorderStyle.Thick;
-                    range.Style.Border.Bottom.Color.SetColor(Color.DarkGreen);
+                    range.Style.Border.Bottom.Color.SetColor(Color.FromArgb(61, 41, 35));
                 }
 
                 using (var range = sheet.Cells["A3:G100"])

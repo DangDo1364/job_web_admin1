@@ -49,7 +49,7 @@ namespace Project_UITGreen_admin.Models
             List<Orders> listOrd = new List<Orders>();
             using (var context = new DataContext())
             {
-                listOrd = context.Orders.Where(p => p.date.ToString("dd-MM-yyyy").Contains(date1) && p.status > 0 && p.status < 4).ToList();
+                listOrd = context.Orders.Where(p => p.date.Year == date.Year && p.date.Month == date.Month && p.date.Day == date.Day).ToList();
             }
             return listOrd;
 

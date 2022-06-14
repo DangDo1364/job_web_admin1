@@ -255,7 +255,7 @@ namespace Project_UITGreen_admin.Controllers
                 IWorksheet worksheet = workbook.Worksheets[0];
 
                 //Logo
-                FileStream imageStream = new FileStream("wwwroot/image/logohoadon.png", FileMode.Open, FileAccess.Read);
+                FileStream imageStream = new FileStream("wwwroot/image/logo.png", FileMode.Open, FileAccess.Read);
                 IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
 
                 //Xóa gridline
@@ -275,7 +275,7 @@ namespace Project_UITGreen_admin.Controllers
                 //Enter text to the cell D1 and apply formatting.
                 worksheet.Range["D1"].Text = "HÓA ĐƠN";
                 worksheet.Range["D1"].CellStyle.Font.Bold = true;
-                worksheet.Range["D1"].CellStyle.Font.RGBColor = Color.FromArgb(0, 137, 71);
+                worksheet.Range["D1"].CellStyle.Font.RGBColor = Color.FromArgb(61, 41, 35);
                 worksheet.Range["D1"].CellStyle.Font.Size = 35;
                 worksheet.Range["D1"].CellStyle.Font.FontName = "Arial";
 
@@ -303,8 +303,8 @@ namespace Project_UITGreen_admin.Controllers
                 worksheet.Range["E8"].Text = paymethod;
 
                 //Format
-                worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(0, 137, 71);
-                worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(0, 137, 71);
+                worksheet.Range["D5:E5"].CellStyle.Color = Color.FromArgb(61, 41, 35);
+                worksheet.Range["D7:E7"].CellStyle.Color = Color.FromArgb(61, 41, 35);
 
                 worksheet.Range["D5:E5"].CellStyle.Font.Color = ExcelKnownColors.White;
                 worksheet.Range["D7:E7"].CellStyle.Font.Color = ExcelKnownColors.White;
@@ -318,7 +318,7 @@ namespace Project_UITGreen_admin.Controllers
 
                 //Thông tin khách hàng
                 worksheet.Range["A7"].Text = "  THÔNG TIN KHÁCH HÀNG";
-                worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(0, 137, 71);
+                worksheet.Range["A7"].CellStyle.Color = Color.FromArgb(61, 41, 35);
                 worksheet.Range["A7"].CellStyle.Font.Bold = true;
                 worksheet.Range["A7"].CellStyle.Font.Color = ExcelKnownColors.White;
                 worksheet.Range["A7"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignLeft;
@@ -411,7 +411,7 @@ namespace Project_UITGreen_admin.Controllers
                 worksheet.Range["A15:E15"].CellStyle.Font.Bold = true;
                 worksheet.Range["D"+row+":E"+row].CellStyle.Font.Bold = true;
 
-                worksheet.Range["A15:E15"].CellStyle.Color = Color.FromArgb(0, 137, 71);
+                worksheet.Range["A15:E15"].CellStyle.Color = Color.FromArgb(61, 41, 35);
 
                 worksheet.Range["A15"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignLeft;
                 worksheet.Range["C15:C22"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;

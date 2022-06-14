@@ -45,10 +45,9 @@
             </tr>
             <tr style="background-color: #b4dca4;">
                 <td><strong>Tên sản phẩm</strong></td>
-                <td><strong>Hình ảnh</strong></td>
                 <td><strong>Giá gốc</strong></td>
                 <td><strong>Tồn kho</strong></td>
-                <td><strong>Đơn vị</strong></td>
+                <td><strong>Size</strong></td>
                 <td><strong>Giảm giá</strong></td>
                 <td><strong>Chênh lệch</strong></td>
                 <td colspan="2"></td>
@@ -58,7 +57,6 @@
                 Img = Image_product.FindImgByIDProOne(item.id_pro);
                 <tr>
                     <td>@item.name_pro</td>
-                    <td><img src="@Img.link" style="width:100px; height:100px" /></td>
                     <td>@String.Format("{0:0,0}", item.price)</td>
                     <td>@item.quantity</td>
                     <td>@item.type</td>
